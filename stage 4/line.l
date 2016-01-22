@@ -10,8 +10,8 @@
 
 %%
 [0-9]+             {  number=atoi(yytext); cout<<"returning "<<number<<"\n";yylval=makeleaf(number);return NUM;}
-"+"                {cout<<"returning + \n";return PLUS;}
-"-"                {cout<<"returning -\n";return MINUS;}
+"+"                {return PLUS;}
+"-"                {return MINUS;}
 "*"                {cout<<"returning * \n";return MUL;}
 "/"                {cout<<"returning /\n";return DIV;}
 ">"                {cout<<"returning >\n";return GREATERTHAN;}
