@@ -12,9 +12,9 @@
 [0-9]+             {  number=atoi(yytext); cout<<"returning "<<number<<"\n";yylval=makeleaf(number);return NUM;}
 "+"                {return PLUS;}
 "-"                {return MINUS;}
-"*"                {cout<<"returning * \n";return MUL;}
-"/"                {cout<<"returning /\n";return DIV;}
-">"                {cout<<"returning >\n";return GREATERTHAN;}
+"*"                {return MUL;}
+"/"                {return DIV;}
+">"                {return GREATERTHAN;}
 "<"                {cout<<"returning <\n";return LESSTHAN;}
 ";" 			   {cout<<"returning ;\n";return SEMICOLON;}
 "=" 			   {cout<<"returning =\n";return ASSIGN;}
